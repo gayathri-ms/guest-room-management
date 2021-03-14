@@ -1,0 +1,70 @@
+.btn,
+.jumbotron,
+.nav :hover {
+  border-radius: 10px;
+  font-size: 1em;
+}
+
+body {
+  background-image: url('../src/core/home.jpg');
+  max-width: 100%;
+    height: auto;
+    padding: 200px;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 40px;
+    padding-top: 100px;
+
+}
+
+.footer bg-dark mt-auto py-3{
+	background-image: url('../src/core/home.jpg');
+    max-width: 100%;
+    height: auto;
+    padding: 200px;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 40px;
+    padding-top: 100px;
+}
+.home{
+	text-align: center;
+	align-content: center;
+}
+h1{
+	font-family: Georgia;
+	font-size: 5em;
+	text-align: center;
+	text-shadow: 1px 1px 1px yellow;
+	border-bottom: 1px solid green;
+	border-right:1px solid green;
+	width:115%;
+	box-shadow: 6px 6px 10px pink;
+	transition: all 7s;
+	margin-top: 20px;
+}
+h1:hover{
+	transform: scale(1.0);
+}
+.row{
+	@include make-container();
+  width: 1400px;
+}
+.container1 {
+  background: pink;
+ /* padding-left: 10px;
+  padding-right: 10px;*/
+  margin-right: 0px;
+  padding-top: 20px;
+  padding-bottom:20px;
+}
+footer {
+  font-family: Georgia;	
+  font-size: 1em;
+  position: absolute;
+  bottom: 10px;
+  right: 100px;
+  left:100px;
+}
