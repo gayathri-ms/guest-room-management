@@ -3,7 +3,7 @@ A project for RDBMS Lab 4th sem in 2021.
 
 Dated: 15.03.2021
 
-This project is brought to you by **Gayathri MS** **Manas Sahu** and **Atrik Ray**.
+This project is brought to you by **Gayathri MS**, **Manas Sahu** and **Atrik Ray**.
 We are 2nd year CSE students in IIIT Bhubaneswar.
 
 The project intends to provide a solution to implement the IIIT Guest House Management System, 
@@ -13,6 +13,7 @@ using a database and a web page to interact with the database.
 1. PostgresSQl 10.15
 2. pgAdmin 4.30
 3. Python 3.7 with Bottle framework
+4. HTML5 and CSS3
 
 ### SYSTEM REQUIREMENTS
 * Operating System: Windows 10 or above
@@ -30,7 +31,7 @@ using a database and a web page to interact with the database.
 #### History
 This project has been done for our our 4th Sem RDBMS Lab.
 
-#### ERD Diagram
+#### [ERD Diagram] (
 
 #### Flow of the webpages
 
