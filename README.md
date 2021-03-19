@@ -7,7 +7,7 @@ This project is brought to you by **[Gayathri MS](https://github.com/gayathri-ms
 We are 2nd year CSE students in IIIT Bhubaneswar.
 
 The project intends to provide a solution to implement the IIIT Guest House Management System, 
-using a database and a web page to interact with the database.
+using a database and web pages to interact with the database.
 
 ### SOFTWARE USED
 1. PostgresSQl 10.15
