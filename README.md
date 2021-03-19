@@ -31,7 +31,7 @@ using a database and a web page to interact with the database.
 #### History
 This project has been done for our our 4th Sem RDBMS Lab.
 
-#### [ERD Diagram] (
+#### [ERD Diagram](https://github.com/gayathri-ms/guest-room-management/blob/main/Database/Schema%20ERD.PNG)
 
 #### Flow of the webpages
 
