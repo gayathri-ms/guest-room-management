@@ -3,7 +3,7 @@ A project for RDBMS Lab 4th sem in 2021.
 
 Dated: 15.03.2021
 
-This project is brought to you by **Gayathri MS**, **Manas Sahu** and **Atrik Ray**.
+This project is brought to you by **[Gayathri MS](https://github.com/gayathri-ms)**, **[Manas Sahu](https://github.com/Zangetsu112)** and **[Atrik Ray](https://github.com/AtrikGit6174)**.
 We are 2nd year CSE students in IIIT Bhubaneswar.
 
 The project intends to provide a solution to implement the IIIT Guest House Management System, 
