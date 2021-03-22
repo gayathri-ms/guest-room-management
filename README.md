@@ -15,7 +15,7 @@ using a database and web pages to interact with the database.
 3. Python 3.7 with Bottle framework
 4. HTML5 and CSS3
 
-### SYSTEM REQUIREMENTS
+### DEVELOPMENT PLATFORM
 * Operating System: Windows 10 or above
 (Not supported in Windows 7 build 7600, might work in Windows 7 build 7601)
 * Browser used: Google Chrome 89.0.4389.82
