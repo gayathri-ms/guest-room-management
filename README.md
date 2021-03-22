@@ -44,7 +44,8 @@ sequences and triggers can be found in the comments of the files in the
 #### ER Diagram
 <img src="/Database/Schema%20ERD.PNG">
 The ER Diagram has been generated using the “Generate ERD” beta feature of pgAdmin 4.30. It is a rough indicator of the 
-relationships between the tables. However, for a complete knowledge of the schema, it is best to look at the schema, [Schema.sql](https://github.com/gayathri-ms/guest-room-management/blob/main/Database/Schema.sql)
+relationships between the tables. However, for a complete knowledge of the schema, it is best to look at the schema,  
+[Schema.sql](https://github.com/gayathri-ms/guest-room-management/blob/main/Database/Schema.sql)
 
 For developers: It is important to first execute the 
 [Sequence.sql](https://github.com/gayathri-ms/guest-room-management/blob/main/Database/Sequence.sql) and the 
