@@ -3,7 +3,8 @@ A project for RDBMS Lab 4th sem in 2021.
 
 Dated: 23.03.2021
 
-This project is brought to you by **[Gayathri MS](https://github.com/gayathri-ms)**, **[Manas Sahu](https://github.com/Zangetsu112)** and **[Atrik Ray](https://github.com/AtrikGit6174)**.
+This project is brought to you by **[Gayathri MS](https://github.com/gayathri-ms)**, 
+**[Manas Sahu](https://github.com/Zangetsu112)** and **[Atrik Ray](https://github.com/AtrikGit6174)**.
 We are 2nd year CSE students in IIIT Bhubaneswar.
 
 The project intends to provide a solution to implement the IIIT Guest House Management System, 
@@ -12,7 +13,7 @@ using a database and web pages to interact with the database.
 ### SOFTWARE USED
 For Database
 
-1. PostgresSQl 10.15
+1. PostgreSQL 10.15
 2. pgAdmin 4.30
 
 For Front-end and Back-end
@@ -26,7 +27,7 @@ For Front-end and Back-end
 
 ### SUPPORTED PLATFORMS
 Since it is a local server based project, it can be implemented on any browsers supporting HTML5 and CSS3,
-while Python 3.7, PostgresSQl 10.15 and pgAdmin 4.30 require Windows 10 and are not supported on lower 
+while Python 3.7, PostgreSQL 10.15 and pgAdmin 4.30 require Windows 10 and are not supported on lower 
 versions of Windows.
 
 ### REPOSITORY DETAILS
@@ -44,12 +45,12 @@ sequences and triggers can be found in the comments of the files in the
 <img src="/Database/Schema%20ERD.PNG">
 The ER Diagram has been generated using the “Generate ERD” beta feature of pgAdmin 4.30. It is a rough indicator of the 
 relationships between the tables. However, for a complete knowledge of the schema, it is best to look at the schema, 
-available at [Schema.sql](https://github.com/gayathri-ms/guest-room-management/blob/main/Database/Schema.sql) .
+available at [Schema.sql](https://github.com/gayathri-ms/guest-room-management/blob/main/Database/Schema.sql)
 
-(For developers: It is important to first execute the 
+For developers: It is important to first execute the 
 [Sequence.sql](https://github.com/gayathri-ms/guest-room-management/blob/main/Database/Sequence.sql) and the 
 [Triggers.sql](https://github.com/gayathri-ms/guest-room-management/blob/main/Database/Triggers.sql) before taking in data 
-from the front end as they have been used to generate unique primary key codes for each table in the schema).
+from the front end as they have been used to generate unique primary key codes for each table in the schema.
 
 #### Flow of the webpages
 
