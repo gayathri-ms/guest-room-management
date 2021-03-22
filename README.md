@@ -38,7 +38,7 @@ The database contains:
     
 2. [Database directory](Database)
 
-    This contains the schema and the corresponding sequences and triggers to create the required database.
+    This contains the schema and the corresponding sequences and trigger to create the required database.
     
 ### DOWNLOAD AND SETUP
 * Step 1. Create a database in your local system using pgAdmin 4.30 or psql shell.
@@ -46,7 +46,7 @@ The database contains:
 attributes to match the databse you created in step 1.
 * Step 3: Open [Schema.sql](Database/Schema.sql) and run in pgAdmin 4.30 under the database you created or 
 using psql shell to create the database schema in your database. After that, run the sequences in 
-[Sequence.sql](Database/Sequence.sql) and triggers in [Trigger.sql](Database/Trigger.sql) under the created 
+[Sequence.sql](Database/Sequence.sql) and trigger in [Trigger.sql](Database/Trigger.sql) under the created 
 database. This completes setting the database up.
 * Step 4: Run Python 3 in your computer shell. Under that, open (server.py)[Backend/server.py] using the appropriate commands. This connects the backend to the database.
 
@@ -56,7 +56,7 @@ database. This completes setting the database up.
 This project has been done for our 4th Sem RDBMS Lab. It has been built in accordance with how our Guest House actually
 operates, and is less diverse and dynamic than a real guest house. Thus, the project has scope for being implemented 
 for a public guest house not related to any institute after certain modifications. Many such tables and related 
-sequences and triggers can be found in the comments of the files in the 
+sequences and trigger can be found in the comments of the files in the 
 [Database directory](Database).
 
 #### ER Diagram
@@ -68,7 +68,7 @@ relationships between the tables. However, for a complete knowledge of the schem
 
 For developers: It is important to first execute the 
 [Sequence.sql](/Database/Sequence.sql) and the 
-[Triggers.sql](Database/Triggers.sql) before taking in data 
+[Trigger.sql](Database/Trigger.sql) before taking in data 
 from the front end as they have been used to generate unique primary key codes for each table in the schema.
 
 #### Flow of the webpages
