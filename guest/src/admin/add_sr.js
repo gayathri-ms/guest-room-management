@@ -1,22 +1,24 @@
 import React,{useState} from 'react';
-import { Link } from 'react-router-dom';
-import { addinvitee } from '../admin/helper/adminapi';
+import { Link,Redirect } from 'react-router-dom';
+import { addsr } from '../admin/helper/adminapi';
 import Base from '../core/Base';
 
 
-const Addinvitee=()=>{
+const Add_sr=()=>{
 
 const [values,setValues]= useState({
-        name :"",
-        Iid: "",
+        roomid:"",
+        sid: "",
         error:"",
+        didRedirect: false,
         success:"",
         formData:"",
     }) 
     const {
-        name,
-        Iid,
+        roomid,
+        sid,
         error,
+        didRedirect,
         success,
         formData
     } = values;
@@ -30,17 +32,17 @@ const [values,setValues]= useState({
         //
         event.preventDefault();
         setValues({...values, error: "",loading: true})
-        addinvitee(formData).then(data =>{
+        addsr(formData).then(data =>{
           if(data.error){
             setValues({...values, error : data.error})
           }else{
             setValues({
               ...values,
-              name:"",
-              Iid:"",
+              roomid:"",
+              sid:"",
+              didRedirect: false,
               loading: false,
               success: true,
-              addinvitee: data.name
             })
           }
         })
@@ -49,60 +51,67 @@ const [values,setValues]= useState({
     }
     const successMessage=()=>{
         if(success){
-            return <h4 className="text-success">Employee added successfully...!
+            return <h4 className="text-success">Staff added successfully...!
                 </h4>
         }
 
     }
+    const performRediret = () =>{
+        if (didRedirect) {
+            return <Redirect to="/admin/m_dashboard"/>;
+        }
+    }
     const errorMessage=()=>{
         if(error){
-            return <h4 className="text-danger">Failed to add the Employee </h4>
+            return <h4 className="text-danger">Failed to add staff </h4>
         }
     };
-    const inviteeForm =()=>{
+    const staffForm =()=>{
       return  <form>
             <div className="form-group">
-                <p className="lead">Name</p>
+                <p className="lead">Staff Id</p>
                 <input type="text" className="form-control my-3" 
-                onChange={handleChange("name")}
-                value={name}
+                onChange={handleChange("sid")}
+                value={sid}
                 autoFocus
                 required
                 placeholder=
-                "Invitee Name"/><br/>
-                <p className="lead">Invitee ID</p>
+                "Staff Id"/><br/>
+                <p className="lead">Room ID</p>
                 <input type="text" className="form-control my-3" 
-                onChange={handleChange("Iid")}
-                value={Iid}
+                onChange={handleChange("roomid")}
+                value={roomid}
                 autoFocus
                 required
                 placeholder=
-                "ID"/>
+                "Room ID"/>
             
-            <button type="submit" onClick={onSubmit} className="btn1 btn-lg">Add Employee</button>
+            <button type="submit" onClick={onSubmit} className="btn1 btn-lg">Add Staff Details</button>
             </div>
         </form>
     }
 
+    
    
      
     return (
-    <Base title =" Add Employee Here"
-        description="Add a new employee"
+    <Base title =" Add Staff Details here"
+        description="Add a new staff"
         className="container2"
         >
-           <div className="stu">
+          <div className="stu">
             <div className="row text-dark rounded">
                 <div className="col-md-8 offset-md-2">
                     {successMessage()}
                     {errorMessage()}
-                    {inviteeForm()}
+                    {staffForm()}
+                    {performRediret()}
+
                 </div>
             </div>
            </div>
     </Base>
 
     )
-    }
-
-export default Addinvitee ;
+};
+export default Add_sr ;

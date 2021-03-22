@@ -1,28 +1,29 @@
 import React , {useState , useEffect}from 'react';
 import { Link ,Redirect} from 'react-router-dom';
 import Base from '../core/Base';
-import { deletestudent} from '../admin/helper/adminapi';
+import { delete_sr} from '../admin/helper/adminapi';
 
 
 
-const Deletestudent=()=>{
-	 const [sid,setsid]= useState("");
+const Delete_sr=()=>{
+     const [sid,setsid]= useState("");
+     const [rid,setrid]= useState("");
      const [didRedirect , setdidRedirect]= useState(false)
      const [error , setError]= useState(false)
      const [success,setSuccess]=useState(false)
 
-	 const delete_student =sid =>{
+    //  const deletesr =sid =>{
 
 
-        deletestudent(sid).then(data =>  {
-            if(data.error){
-                console.log(data.error);
-            }
-            else{
-            	setsid(sid)
-            }
-        })
-    }
+    //     delete_sr(sid,rid).then(data =>  {
+    //         if(data.error){
+    //             console.log(data.error);
+    //         }
+    //         else{
+    //             setsid(sid)
+    //         }
+    //     })
+    // }
 
      const handleChange=(event)=>{
         //
@@ -36,7 +37,7 @@ const Deletestudent=()=>{
         setSuccess(true);
 
         //backend request fired
-          Deletestudent({sid})
+          Delete_sr({sid,rid})
           .then(data=>{
             if(data.error){
                 setError(true)
@@ -45,6 +46,7 @@ const Deletestudent=()=>{
                 setError("")
                 setSuccess(true);
                 setsid("");
+                setrid("");
                 setdidRedirect(true);
 
             }
@@ -55,43 +57,52 @@ const Deletestudent=()=>{
 
     const errorMessage=()=>{
         if(error){
-            return <h4 className="text-danger">Failed to Delete student </h4>
+            return <h4 className="text-danger">Failed to Delete staff details </h4>
         }
     };
     
      const performRediret = () =>{
         if (didRedirect) {
-            return <Redirect to="/admin/admindashboard" />;
+            return <Redirect to="/admin/m_dashboard" />;
         }
        }
 
     const successMessage=()=>{
         if(success){
-            return <h4 className="text-success">Student deleted successfully...!
+            return <h4 className="text-success">Staff Details deleted successfully...!
                 </h4>
         }
      }
 
-    const studentForm =()=>{
+    const staffForm =()=>{
       return  <form>
                 <div className="form-group">
-                <p className="lead">Student ID</p>
+                <p className="lead">Staff ID</p>
                 <input type="text" className="form-control my-3" 
                 onChange={handleChange}
                 value={sid}
                 autoFocus
                 required
                 placeholder=
-                "ID"/>
+                "Staff ID"/>
+
+                <p className="lead">Room ID</p>
+                <input type="text" className="form-control my-3" 
+                onChange={handleChange}
+                value={rid}
+                autoFocus
+                required
+                placeholder=
+                "Room ID"/>
             
-            <button onClick={onSubmit} className="btn1 btn-lg">Delete Student</button>
+            <button onClick={onSubmit} className="btn1 btn-lg">Delete Staff Details</button>
             </div>
         </form>
     }
 
      return (
-    <Base title =" Delete Student Here"
-        description="Delete a student"
+    <Base title =" Delete Staff Details Here"
+        description=""
         className="container2"
         >
           <div className="stu">
@@ -99,7 +110,7 @@ const Deletestudent=()=>{
                 <div className="col-md-8 offset-md-2">
                     {successMessage()}
                     {errorMessage()}
-                    {studentForm()}
+                    {staffForm()}
                     { performRediret()}
 
                 </div>
@@ -110,4 +121,4 @@ const Deletestudent=()=>{
     )
  
 }
-export default Deletestudent ;
+export default Delete_sr ;

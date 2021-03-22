@@ -1,13 +1,12 @@
 import React,{useState} from "react";
 import Base from "../core/Base";
 import {Link,Redirect} from "react-router-dom";
-// import { Login,authentication,isAuthenticated} from '../admin/helper/adminapi';
 
-const L_login=()=>{
+const M_login=()=>{
     const [values,setValues]=useState({
  
-        username:"abcdef",
-        password:"123456789",
+        username:"",
+        password:"",
         error:"",
         loading:false,
         didRedirect: false,
@@ -44,7 +43,7 @@ const L_login=()=>{
         //     }
         // })
         // .catch(console.log("Invalid username and password"))
-        if(username=="gayathri" &&password=="987654321"){
+        if(username=="manager" &&password=="12345"){
            setValues(
                    {...values,
                     username:"",
@@ -60,7 +59,7 @@ const L_login=()=>{
     }
     const performRediret = () =>{
         if (didRedirect) {
-            return <Redirect to="/admin/admindashboard" />;
+            return <Redirect to="/admin/m_dashboard" />;
         }
           
         // if(isAuthenticated()){
@@ -100,12 +99,12 @@ const L_login=()=>{
                <div className="col-md-6 offset-sm-3 text-left">
                    <form >
 
-                      <div className="display-6 ">
+                      <div className="display-7 ">
                           <label className="text-dark">Username</label>
                         <input className="form-control my-3" onChange={handleChange("username")}  value={username}   type="text" />
                       </div>
 
-                      <div className="display-6 from-group">
+                      <div className="display-7 from-group">
                           <label className="text-dark">Password</label>
                         <input className="form-control my-3" onChange={handleChange("password")}  value={password}   type="password" />
                       </div>
@@ -119,8 +118,8 @@ const L_login=()=>{
     }
     return (
         <Base
-        title="Login Page"
-        description="A page for admin to login"
+        title="Manager Login Page"
+        description=""
         className="container2"
         >
           <div className="stu">
@@ -145,4 +144,4 @@ const L_login=()=>{
     )
 }
  
-export default L_login;
+export default M_login;

@@ -1,44 +1,51 @@
 import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
-// import { isAuthenticated } from '../helper/adminapi';
+import { addstudent } from '../admin/helper/adminapi';
 import Base from '../core/Base';
 
 
 const Addstudent=()=>{
 
+const [values,setValues]= useState({
+        name :"",
+        sid: "",
+        error:"",
+        success:"",
+        formData:"",
+    }) 
+    const {
+        name,
+        sid,
+        error,
+        success,
+        formData
+    } = values;
 
-    const [name,setName] = useState("")
-    const [sid,setsid] = useState("")
-    const [error , setError]= useState(false)
-
-    const [success,setSuccess]=useState(false)
-
-    // const {user, token}= isAuthenticated();
-    const handleChange=(event)=>{
-        //
-        setError("");
-        setName(event.target.value)
+    const handleChange=name =>(event)=>{
+          const value = event.target.value ;
+       // formData.set(name,value);
+      setValues({...values ,[name]: value})
     }
-    const onSubmit=(event)=>{
+    const onSubmit=(event) => {
+        //
         event.preventDefault();
-        setError("");
-        setSuccess(false);
-
-        //backend request fired
-       Addstudent({name,sid})
-       .then(data=>{
-            if(data.error){
-                setError(true)
-            }
-            else{
-                setError("")
-                setSuccess(true);
-                setName("");
-                setsid("");
-
-            }
+        setValues({...values, error: "",loading: true})
+        addstudent(formData).then(data =>{
+            console.log("data",data);
+          if(data.error){
+            setValues({...values, error : data.error})
+          }else{
+            setValues({
+              ...values,
+              name:"",
+              sid:"",
+              loading: false,
+              success: true,
+              addstudent: data.name
+            })
+          }
         })
-      
+
 
     }
     const successMessage=()=>{
@@ -58,22 +65,22 @@ const Addstudent=()=>{
             <div className="form-group">
                 <p className="lead">Name</p>
                 <input type="text" className="form-control my-3" 
-                onChange={handleChange}
+                onChange={handleChange("name")}
                 value={name}
                 autoFocus
                 required
                 placeholder=
-                "Name"/><br/><br/>
+                "Name"/><br/>
                 <p className="lead">Student ID</p>
                 <input type="text" className="form-control my-3" 
-                onChange={handleChange}
+                onChange={handleChange("sid")}
                 value={sid}
                 autoFocus
                 required
                 placeholder=
                 "ID"/>
             
-            <button onClick={onSubmit} className="btn btn-outline-info">Add Student</button>
+            <button type="submit" onClick={onSubmit} className="btn1 btn-lg">Add Student</button>
             </div>
         </form>
     }
@@ -84,9 +91,10 @@ const Addstudent=()=>{
     return (
     <Base title =" Add Student Here"
         description="Add a new student"
-        className="container bg-info p-4"
+        className="container2"
         >
-            <div className="row bg-white rounded">
+          <div className="stu">
+            <div className="row text-dark rounded">
                 <div className="col-md-8 offset-md-2">
                     {successMessage()}
                     {errorMessage()}
@@ -94,6 +102,7 @@ const Addstudent=()=>{
 
                 </div>
             </div>
+           </div>
     </Base>
 
     )

@@ -15,50 +15,36 @@ const currentTab=(history, path)=>{
 const Menu=({history})=>{
     return(
         <div>
-            <ul className="nav nav-tabs bg-dark">
+            <ul className="nav nav-tabs">
                 <li className="nav-item">
                     <Link style={currentTab(history,"/")} className="nav-link" to="/">
                         Home
                     </Link>
                 </li>
 
-                {isAuthenticated() && (
+                
                 <li  className="nav-item">
-                    <Link  style={currentTab(history,"/admin/admindashboard")} className="nav-link" to="/admin/admindashboard">
+                    <Link  style={currentTab(history,"/admin/login")} className="nav-link" to="/admin/login">
                        Admin
                     </Link>
 
                 </li>
-                )}
-
-                {isAuthenticated() && (
+                
                 <li  className="nav-item">
                     <Link  style={currentTab(history,"/admin/recdashboard")} className="nav-link" to="/admin/recdashboard">
-                       Receptionist
+                       Reception
                     </Link>
 
                 </li>
 
-                )}
+                <li  className="nav-item">
+                    <Link  style={currentTab(history,"/admin/m_login")} className="nav-link" to="/admin/m_login">
+                       Manager
+                    </Link>
 
-            {!isAuthenticated() && (
-                <Fragment>
-                   <li className="nav-item">
-                   <Link className="nav-link"
-                    style={currentTab(history, '/signup')}
-                    to="/signup"
-                   > Sign Up
-                   </Link>
-                   </li>
-                   <li className="nav-item">
-                   <Link className="nav-link"
-                    style={currentTab(history, '/login')}
-                    to="/login"
-                   > Login In
-                   </Link>
-                   </li>
-                </Fragment>
-            )}
+                </li>
+
+
 
             </ul>
 

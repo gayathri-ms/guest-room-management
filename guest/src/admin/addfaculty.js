@@ -1,44 +1,51 @@
 import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
-// import { isAuthenticated } from '../helper/adminapi';
 import Base from '../core/Base';
+import { addfaculty} from '../admin/helper/adminapi';;
+// import Base from '../core/Base';
 
 
 const Addfaculty=()=>{
 
+const [values,setValues]= useState({
+        name :"",
+        fid: "",
+        error:"",
+        success:"",
+        formData:"",
+    }) 
+    const {
+        name,
+        fid,
+        error,
+        success,
+        formData
+    } = values;
 
-    const [name,setName] = useState("")
-    const [fid,setfid] = useState("")
-    const [error , setError]= useState(false)
-
-    const [success,setSuccess]=useState(false)
-
-    // const {user, token}= isAuthenticated();
-    const handleChange=(event)=>{
-        //
-        setError("");
-        setName(event.target.value)
+    const handleChange=name =>(event)=>{
+          const value = event.target.value ;
+       // formData.set(name,value);
+      setValues({...values ,[name]: value})
     }
-    const onSubmit=(event)=>{
+    const onSubmit=(event) => {
+        //
         event.preventDefault();
-        setError("");
-        setSuccess(false);
-
-        //backend request fired
-        Addfaculty({name,fid})
-        .then(data=>{
-            if(data.error){
-                setError(true)
-            }
-            else{
-                setError("")
-                setSuccess(true);
-                setName("");
-                setfid("");
-
-            }
+        setValues({...values, error: "",loading: true})
+        addfaculty(formData).then(data =>{
+          if(data.error){
+            setValues({...values, error : data.error})
+          }else{
+            setValues({
+              ...values,
+              name:"",
+              fid:"",
+              loading: false,
+              success: true,
+              addfaculty: data.name
+            })
+          }
         })
-      
+
 
     }
     const successMessage=()=>{
@@ -54,28 +61,28 @@ const Addfaculty=()=>{
         }
     };
     const facultyForm =()=>{
-      return  <form>
+      return ( <form>
             <div className="form-group">
                 <p className="lead">Name</p>
                 <input type="text" className="form-control my-3" 
-                onChange={handleChange}
+                onChange={handleChange("name")}
                 value={name}
                 autoFocus
                 required
                 placeholder=
-                "Faculty Name"/><br/><br/>
+                "Faculty Name"/><br/>
                 <p className="lead">Faculty ID</p>
                 <input type="text" className="form-control my-3" 
-                onChange={handleChange}
+                onChange={handleChange("fid")}
                 value={fid}
                 autoFocus
                 required
                 placeholder=
                 "ID"/>
             
-            <button onClick={onSubmit} className="btn btn-outline-info">Add Faculty</button>
+            <button type="submit" onClick={onSubmit} className="btn1 btn-lg">Add Faculty</button>
             </div>
-        </form>
+        </form>)
     }
 
    
@@ -84,18 +91,20 @@ const Addfaculty=()=>{
     return (
     <Base title =" Add Faculty Here"
         description="Add a new faculty"
-        className="container bg-info p-4"
+        className="container2"
         >
-            <div className="row bg-white rounded">
+          <div className="stu">
+            <div className="row text-dark rounded">
                 <div className="col-md-8 offset-md-2">
                     {successMessage()}
                     {errorMessage()}
                     {facultyForm()}
                 </div>
             </div>
+          </div>
     </Base>
 
     )
-    }
+}
 
 export default Addfaculty ;

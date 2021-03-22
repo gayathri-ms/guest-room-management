@@ -1,14 +1,16 @@
 import React , {useState , useEffect}from 'react';
 import { Link } from 'react-router-dom';
 import Base from '../core/Base';
-import { deletefaculty} from './helper/adminapi';
+import { deletefaculty} from '../admin/helper/adminapi';
 
 
 
 const Deletefaculty=()=>{
-	 const [Fid,setFid]= useState();
-   
-	 const delete_faculty =fid =>{
+	 const [Fid,setFid]= useState("");
+     const [fid,setfid] = useState("")
+     const [error , setError]= useState(false)
+     const [success,setSuccess]=useState(false)
+	 const deletefaculty =fid =>{
 
 
         deletefaculty(fid).then(data =>  {
@@ -74,7 +76,7 @@ const Deletefaculty=()=>{
                 placeholder=
                 "ID"/>
             
-            <button onClick={onSubmit} className="btn btn-outline-info">Delete Faculty</button>
+            <button onClick={onSubmit} className="btn1 btn-lg">Delete Faculty</button>
             </div>
         </form>
     }
@@ -82,9 +84,10 @@ const Deletefaculty=()=>{
      return (
     <Base title =" Delete Faculty Here"
         description="Delete a faculty"
-        className="container bg-info p-4"
+        className="container2"
         >
-            <div className="row bg-white rounded">
+          <div className="stu">
+            <div className="row text-dark rounded">
                 <div className="col-md-8 offset-md-2">
                     {successMessage()}
                     {errorMessage()}
@@ -92,6 +95,7 @@ const Deletefaculty=()=>{
 
                 </div>
             </div>
+          </div>
     </Base>
 
     )
