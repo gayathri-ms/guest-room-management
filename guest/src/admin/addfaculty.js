@@ -71,14 +71,14 @@ const [values,setValues]= useState({
                 required
                 placeholder=
                 "Faculty Name"/><br/>
-                <p className="lead">Faculty ID</p>
+                <p className="lead">Department</p>
                 <input type="text" className="form-control my-3" 
                 onChange={handleChange("fid")}
                 value={fid}
                 autoFocus
                 required
                 placeholder=
-                "ID"/>
+                "Department"/>
             
             <button type="submit" onClick={onSubmit} className="btn1 btn-lg">Add Faculty</button>
             </div>

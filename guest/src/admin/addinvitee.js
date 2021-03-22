@@ -8,6 +8,7 @@ const Addinvitee=()=>{
 
 const [values,setValues]= useState({
         name :"",
+        position:"",
         Iid: "",
         error:"",
         success:"",
@@ -15,6 +16,7 @@ const [values,setValues]= useState({
     }) 
     const {
         name,
+        position,
         Iid,
         error,
         success,
@@ -37,6 +39,7 @@ const [values,setValues]= useState({
             setValues({
               ...values,
               name:"",
+              position:"",
               Iid:"",
               loading: false,
               success: true,
@@ -69,15 +72,32 @@ const [values,setValues]= useState({
                 autoFocus
                 required
                 placeholder=
-                "Invitee Name"/><br/>
-                <p className="lead">Invitee ID</p>
-                <input type="text" className="form-control my-3" 
+                "Employee Name"/><br/>
+                 
+                 <p className="lead">Position</p>
+                <select
+                  onChange={handleChange("position")}
+                   className="form-control my-3"
+                >
+                <option>Select</option>
+                <option value = "Manager selected">Manager</option>
+                <option value = "Receptionist">Receptionist</option>
+                <option value = "Guard">Guard</option>
+                <option value = "Housekeeping">Housekeeping</option>
+                <option value = "Chef">Chef</option>
+                <option value = "Kitchen">Kitchen</option>
+                <option value = "Cashier">Cashier</option>
+                </select>
+                
+                <p className="lead">Salary</p>
+                <input type="number" className="form-control my-3" 
                 onChange={handleChange("Iid")}
                 value={Iid}
                 autoFocus
                 required
                 placeholder=
-                "ID"/>
+                "Salary"/>
+            
             
             <button type="submit" onClick={onSubmit} className="btn1 btn-lg">Add Employee</button>
             </div>

@@ -29,12 +29,12 @@ const DashBoard =()=>{
                         </Link>
                       </li>
                       <li className="list-group-item">
-                        <Link to="/admin/delete_sr" className="nav-link text-dark">
+                        <Link to="/admin/v_name" className="nav-link text-dark">
                         Search Guests
                         </Link>
                       </li>
                       <li className="list-group-item">
-                        <Link to="/admin/delete_sr" className="nav-link text-dark">
+                        <Link to="/admin/v_arrival" className="nav-link text-dark">
                         Search Arrivals
                         </Link>
                       </li>

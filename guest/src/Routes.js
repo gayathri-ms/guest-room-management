@@ -17,12 +17,11 @@ import M_login from './admin/m_login';
 import Dashboard from './admin/m_dashboard';
 import Add_sr from './admin/add_sr';
 import Delete_sr from './admin/delete_sr';
-// import View_name from './admin/v_name';
-// import View_arrival from './admin/v_arrival';
+import View_name from './admin/v_name';
+import View_arrival from './admin/v_arrival';
 
 
-// <Route path= "/admin/v_name" exact component={View_name}/>
-// <Route path= "/admin/v_arrival" exact component={View_arrival}/>
+
 
 
 const Routes=()=>{
@@ -45,7 +44,8 @@ const Routes=()=>{
             <Route path= "/admin/add_sr" exact component={Add_sr}/>
             <Route path= "/admin/delete_sr" exact component={Delete_sr}/>
             <Route path= "/admin/recdashboard" exact component={Reception}/>
-
+            <Route path= "/admin/v_arrival" exact component={View_arrival}/>
+            <Route path= "/admin/v_name" exact component={View_name}/>
 
 
         </Switch>

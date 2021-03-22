@@ -225,28 +225,30 @@ export const addsr = (user) => {
     
   }
  
-// export const view_name = ()=>{
-//     return fetch('${API}/view_by_name',{
-//         method:"GET",
-//         headers:{
-//             Accept:"application/json",
-//             "Content-Type":"application/json",
-//         }
-//     }).then(response=>{
-//         return response.json()
-//     })
-//     .catch(err=>console.log(err)) 
-//     }
+export const view_name = ()=>{
+  return new Promise((resolve,reject)=>{
+     fetch('${API}/view_by_name',{
+        method:"GET",
+        headers:{
+            Accept:"application/json",
+            "Content-Type":"application/json",
+        }
+    }).then(response=>{
+        return response.json()
+    })
+    .catch(err=>console.log(err))
+  } )
+    }
 
-//     export const view_arrival = ()=>{
-//     return fetch('${API}/view_by_arrival',{
-//         method:"GET",
-//         headers:{
-//             Accept:"application/json",
-//             "Content-Type":"application/json",
-//         }
-//     }).then(response=>{
-//         return response.json()
-//     })
-//     .catch(err=>console.log(err)) 
-//     }
+    export const view_arrival = ()=>{
+    return fetch('${API}/view_by_arrival',{
+        method:"GET",
+        headers:{
+            Accept:"application/json",
+            "Content-Type":"application/json",
+        }
+    }).then(response=>{
+        return response.json()
+    })
+    .catch(err=>console.log(err)) 
+    }
