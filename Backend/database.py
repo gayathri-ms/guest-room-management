@@ -28,7 +28,7 @@ class Database():
     def commit(self):
         self.conn.commit()
 
-    """ Helper Fucntions/ Methods """
+    """ Helper Functions/ Methods """
 
     def _executeSQLGetCursor(self, sql, args=None):
         if not self.conn:
