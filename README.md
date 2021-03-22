@@ -47,8 +47,10 @@ attributes to match the databse you created in step 1.
 * Step 3: Open [Schema.sql](Database/Schema.sql) and run in pgAdmin 4.30 under the database you created or 
 using psql shell to create the database schema in your database. After that, run the sequences in 
 [Sequence.sql](Database/Sequence.sql) and trigger in [Trigger.sql](Database/Trigger.sql) under the created 
-database. This completes setting the database up.
-* Step 4: Run Python 3 in your computer shell. Under that, open (server.py)[Backend/server.py] using the appropriate commands. This connects the backend to the database.
+database. Make sure to follow the comments for guidelines in the files. This completes setting the database up.
+* Step 5: (OPtional) The user can add few required data on their own in the tables using psql or pgAdmin 4.30
+* Step 4: Run Python 3 in your computer shell. Under that, open [server.py](Backend/server.py) using the appropriate 
+commands. This connects the backend to the database.
 
 
 ### ADDITIONAL INFO ABOUT THE PROGRAM
