@@ -41,7 +41,15 @@ The database contains:
     This contains the schema and the corresponding sequences and triggers to create the required database.
     
 ### DOWNLOAD AND SETUP
-* Step 1. Open data
+* Step 1. Create a database in your local system using pgAdmin 4.30 or psql shell.
+* Step 2: Open [database.py](Backend/database.py). In the db_connect() function, change the values of the 
+attributes to match the databse you created in step 1.
+* Step 3: Open [Schema.sql](Database/Schema.sql) and run in pgAdmin 4.30 under the database you created or 
+using psql shell to create the database schema in your database. After that, run the sequences in 
+[Sequence.sql](Database/Sequence.sql) and triggers in [Trigger.sql](Database/Trigger.sql) under the created 
+database. This completes setting the database up.
+* Step 4: Run Python 3 in your computer shell. Under that, open (server.py)[Backend/server.py] using the appropriate commands. This connects the backend to the database.
+
 
 ### ADDITIONAL INFO ABOUT THE PROGRAM
 #### History
