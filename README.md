@@ -31,7 +31,17 @@ while Python 3.7, PostgreSQL 10.15 and pgAdmin 4.30 require Windows 10 and are n
 versions of Windows.
 
 ### REPOSITORY DETAILS
+The database contains:
+1. [Backend directory](Backend) 
 
+    This contains files relating to the backend of the project. 
+    
+2. [Database directory](Database)
+
+    This contains the schema and the corresponding sequences and triggers to create the required database.
+    
+### DOWNLOAD AND SETUP
+* Step 1. Open data
 
 ### ADDITIONAL INFO ABOUT THE PROGRAM
 #### History
@@ -39,18 +49,18 @@ This project has been done for our 4th Sem RDBMS Lab. It has been built in accor
 operates, and is less diverse and dynamic than a real guest house. Thus, the project has scope for being implemented 
 for a public guest house not related to any institute after certain modifications. Many such tables and related 
 sequences and triggers can be found in the comments of the files in the 
-[Database](https://github.com/gayathri-ms/guest-room-management/tree/main/Database) directory.
+[Database directory](Database).
 
 #### ER Diagram
 <img src="/Database/Schema%20ERD.PNG">
 
 The ER Diagram has been generated using the “Generate ERD” beta feature of pgAdmin 4.30. It is a rough indicator of the 
 relationships between the tables. However, for a complete knowledge of the schema, it is best to look at the schema,
-[Schema.sql](https://github.com/gayathri-ms/guest-room-management/blob/main/Database/Schema.sql) 
+[Schema.sql](Database/Schema.sql) 
 
 For developers: It is important to first execute the 
-[Sequence.sql](https://github.com/gayathri-ms/guest-room-management/blob/main/Database/Sequence.sql) and the 
-[Triggers.sql](https://github.com/gayathri-ms/guest-room-management/blob/main/Database/Triggers.sql) before taking in data 
+[Sequence.sql](/Database/Sequence.sql) and the 
+[Triggers.sql](Database/Triggers.sql) before taking in data 
 from the front end as they have been used to generate unique primary key codes for each table in the schema.
 
 #### Flow of the webpages
