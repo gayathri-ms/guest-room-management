@@ -1,0 +1,142 @@
+
+.nav :hover {
+  border-radius: 10px;
+  font-size: 1em;
+}
+.nav-link {
+  font-size: 1em;
+  font-family: Georgia;
+}
+.card-header{
+  background: #BBA6B1;
+  font-family: Georgia;
+  font-size: 1.6em;
+  padding-top: 25px;
+  padding-bottom:25px;
+  color: black;
+}
+.btn{
+  background: #BBA6B1;
+}
+.btn:hover{
+  background: #FFFFFF;
+}
+.jumbotron{
+  font-family: Georgia;
+  font-size: 3em;
+}
+.list-group-item:hover{
+  font-family: Times New Roman;
+  font-size: 1.25em;
+  /*background: #BBA6B1;*/
+  color: #BBA6B1;
+}
+body {
+  
+  background-image: url('../src/core/home.jpg');
+  max-width: 100%;
+    height: auto;
+    padding: 200px;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+
+}
+/*
+.footer bg-dark mt-auto py-3{
+	background-image: url('../src/core/home.jpg');
+    max-width: 100%;
+    height: auto;
+    padding: 200px;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 40px;
+    padding-top: 100px;
+}*/
+.home{
+	text-align: center;
+	align-content: center;
+}
+h1{
+	font-family: Georgia;
+	font-size: 5em;
+	text-align: center;
+	text-shadow: 1px 1px 1px yellow;
+	border-bottom: 1px solid green;
+	border-right:1px solid green;
+	width:100%;
+	box-shadow: 6px 6px 10px pink;
+	transition: all 7s;
+	margin-top: 20px;
+}
+h1:hover{
+	transform: scale(1.0);
+}
+.row1{
+	@include make-container();
+  width: 1400px;
+  font-size: 1.25em;
+}
+.stu{
+   font-family: Georgia;  
+   font-size: 1.5em;
+   background: #FFFFFF;
+  padding-top: 35px;
+  padding-bottom:35px;
+}
+.btn1{
+  background: #BBA6B1;
+  font-family: Georgia;
+  font-size: 0.75em; 
+}
+.btn1:hover{
+  background: #FFFFFF;
+  font-family: Georgia;
+  font-size: 0.85em; 
+}
+.container2{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 300px;
+  margin-left: 300px;
+  padding-top: 35px;
+  padding-bottom:35px;
+  shape-margin: 25%;
+  background: #BBA6B1;
+}
+.container1 {
+  
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-top: 20px;
+  padding-bottom:20px;
+  width: 100%;
+}
+.column{
+  float:left;
+  width:25%;
+
+}
+.row:after{
+  content:"";
+  display: table;
+  clear:both;
+}
+/*footer {
+  font-family: Georgia;	
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 10px;
+  right: 250px;
+  left:250px;
+}*/
+/*.foot{
+  background: #BBA6B1;
+
+}*/
