@@ -23,8 +23,8 @@ For Database
 
 For Front-end and Back-end
 
-3. Python 3.7 with Bottle framework
-4. HTML5 and CSS3
+3. Bottle Micro Framework (API endpoints/ Back end)
+4. React (Front end)
 
 ### DEVELOPMENT PLATFORM
 * Operating System: Windows 10 and Mac
