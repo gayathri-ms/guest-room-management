@@ -12,7 +12,7 @@ using a database and web pages to interact with the database. This project has b
 It has been built in accordance with how our Guest House actuallyoperates, and is less diverse and dynamic than a 
 real guest house. Thus, the project has scope for being implemented for a public guest house not related to any 
 institute after certain modifications. Many such tables and related sequences and trigger can be found in the comments 
-of the files in the [Database directory](Database).
+of the files in the [Database directory](database).
 
 
 ### SOFTWARE USED
@@ -47,10 +47,12 @@ The database contains:
     Also contains sample data and the ERD.
    
 3. [Frontend directory](src)
-
-4. [Site map](Site map.jpg)
-
-    This contains the site map of the web pages.
+    
+    This contains the Fronteend code and the sitemap.PNG
+    
+4. [images](images)
+    
+    This contains images of the webpages.
     
 ### DOWNLOAD AND SETUP
 * Step 1. Create a database in your local system using pgAdmin 4.30 or psql shell.
