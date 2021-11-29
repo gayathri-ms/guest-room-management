@@ -37,7 +37,7 @@ versions of Windows.
 
 ### REPOSITORY DETAILS
 The database contains:
-1. [Backend directory](new_ackend) 
+1. [Backend directory](new_backend) 
 
     This contains files relating to the backend of the project. 
     
@@ -101,5 +101,7 @@ needs little modifications to work for any general guest house management system
 1. _Mr Raghunath Dey_, our instructor in the RDBMS Lab for assigning the project.
 2. _[Gayathri MS](https://github.com/gayathri-ms)_, for learning and handling the front-end at very short notice.
 3. _[Manas Sahu](https://github.com/Zangetsu112)_, for guiding the database outline in accordance with the backend.
-4. _[Atrik Ray](https://github.com/AtrikGit6174)_, for handling the database schema and the data.
-6. _YOU_, the reader, for your time and patience and interest!
+4. _Atrik Ray_, for handling the database schema, data and documentation.
+    * [LinkedIn - atrikray7171](https://www.linkedin.com/in/atrikray7171/)
+    * [GitHub](https://github.com/AtrikGit6174)
+5. _YOU_, the reader, for your time and patience and interest!
