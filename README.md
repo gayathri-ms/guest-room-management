@@ -56,7 +56,7 @@ The database contains:
     
 ### DOWNLOAD AND SETUP
 * Step 1. Create a database in your local system using pgAdmin 4.30 or psql shell.
-* Step 2: Open [new_ackend/database.py](new_backend/database.py). In the db_connect() function, change the values of the 
+* Step 2: Open [new_backend/database.py](new_backend/database.py). In the db_connect() function, change the values of the 
 attributes to match the database you created in step 1.
 * Step 3: Open [database/schema.sql](database/schema.sql) and run in pgAdmin 4.30 under the database you created or 
 using psql shell to create the database schema in your database. After that, run the sequences in 
