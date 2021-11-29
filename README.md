@@ -103,5 +103,5 @@ needs little modifications to work for any general guest house management system
 3. _[Manas Sahu](https://github.com/Zangetsu112)_, for guiding the database outline in accordance with the backend.
 4. _Atrik Ray_, for handling the database schema, data and documentation.
     * [LinkedIn - atrikray7171](https://www.linkedin.com/in/atrikray7171/)
-    * [GitHub](https://github.com/AtrikGit6174)
+    * [GitHub - AtrikGit6174](https://github.com/AtrikGit6174)
 5. _YOU_, the reader, for your time and patience and interest!
