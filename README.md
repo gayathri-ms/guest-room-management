@@ -12,8 +12,10 @@ using a database and web pages to interact with the database. This project has b
 It has been built in accordance with how our Guest House actuallyoperates, and is less diverse and dynamic than a 
 real guest house. Thus, the project has scope for being implemented for a public guest house not related to any 
 institute after certain modifications. Many such tables and related sequences and trigger can be found in the comments 
-of the files in the [Database directory](database).
+of the files in the [database directory](https://github.com/gayathri-ms/guest-room-management/tree/main/database).
 
+* [GitHub Repo](https://github.com/gayathri-ms/guest-room-management/)
+* [GitHub Pages](https://gayathri-ms.github.io/guest-room-management/)
 
 ### SOFTWARE USED
 For Database
@@ -37,33 +39,33 @@ versions of Windows.
 
 ### REPOSITORY DETAILS
 The database contains:
-1. [Backend directory](new_backend) 
+1. [Backend directory](https://github.com/gayathri-ms/guest-room-management/tree/main/new_backend) 
 
     This contains files relating to the backend of the project. 
     
-2. [Database directory](database)
+2. [Database directory](https://github.com/gayathri-ms/guest-room-management/tree/main/database)
 
     This contains the schema and the corresponding sequences and trigger to create the required database.
     Also contains sample data and the ERD.
    
-3. [Frontend directory](src)
+3. [Frontend directory](https://github.com/gayathri-ms/guest-room-management/tree/main/src)
     
     This contains the Fronteend code and the sitemap.PNG
     
-4. [images](images)
+4. [images](https://github.com/gayathri-ms/guest-room-management/tree/main/images)
     
     This contains images of the webpages.
     
 ### DOWNLOAD AND SETUP
 * Step 1. Create a database in your local system using pgAdmin 4.30 or psql shell.
-* Step 2: Open [new_backend/database.py](new_backend/database.py). In the db_connect() function, change the values of the 
+* Step 2: Open [new_backend/database.py](https://github.com/gayathri-ms/guest-room-management/tree/main/new_backend/database.py). In the db_connect() function, change the values of the 
 attributes to match the database you created in step 1.
-* Step 3: Open [database/schema.sql](database/schema.sql) and run in pgAdmin 4.30 under the database you created or 
+* Step 3: Open [database/schema.sql](https://github.com/gayathri-ms/guest-room-management/tree/main/database/schema.sql) and run in pgAdmin 4.30 under the database you created or 
 using psql shell to create the database schema in your database. After that, run the sequences in 
-[database/sequence.sql](database/sequence.sql) and triggers in [database/trigger.sql](database/trigger.sql) under the created 
+[database/sequence.sql](https://github.com/gayathri-ms/guest-room-management/tree/main/database/sequence.sql) and triggers in [database/trigger.sql](https://github.com/gayathri-ms/guest-room-management/tree/main/database/trigger.sql) under the created 
 database. Make sure to follow the comments for guidelines in the files. This completes setting the database up.
 * Step 4: (Optional) The user can add a few required data on their own in the tables using psql or pgAdmin 4.30.
-* Step 5: Run Python 3 in your computer shell. Under that, open [new_backend/server.py](new_backend/server.py) using the appropriate 
+* Step 5: Run Python 3 in your computer shell. Under that, open [new_backend/server.py](https://github.com/gayathri-ms/guest-room-management/tree/main/new_backend/server.py) using the appropriate 
 commands. This connects the backend to the database.
 
 ### SOFTWARE INTERFACE AND SAMPLE OPERATION
@@ -81,15 +83,15 @@ and not feeded into the database or queries out of the database.
 
 
 #### Database Design
-<img src="/database/SchemaERD.PNG">
+<img src="database/SchemaERD.PNG">
 
 The ER Diagram has been generated using the “Generate ERD” beta feature of pgAdmin 4.30. It is a rough indicator of the 
 relationships between the tables. However, for a complete knowledge of the schema, it is best to look at the schema,
-[schema.sql](database/schema.sql) 
+[schema.sql](https://github.com/gayathri-ms/guest-room-management/tree/main/database/schema.sql) 
 
 For developers: It is important to first execute the 
-[sequence.sql](database/sequence.sql) and the 
-[trigger.sql](database/trigger.sql) before taking in data 
+[sequence.sql](https://github.com/gayathri-ms/guest-room-management/tree/main/database/sequence.sql) and the 
+[trigger.sql](https://github.com/gayathri-ms/guest-room-management/tree/main/database/trigger.sql) before taking in data 
 from the front end as they have been used to generate unique primary key codes for each table in the schema.
 
 ### SYSTEM IMPLEMENTATION
